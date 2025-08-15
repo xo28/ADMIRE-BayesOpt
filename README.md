@@ -31,11 +31,9 @@ Please feel free to email us or raise an issue with this repository and we'll ge
 This implementaion is based on an official BoTorch tutorial: "Multi-fidelity Bayesian optimization with discrete fidelities using KG"
 https://botorch.org/docs/tutorials/discrete_multi_fidelity_bo/. We followed its comparasions between BayesOpt and MFBayesOpt.
 
-## Data
-We opensource the data mixture dataset: ```admire_ift_runs```
-and use the mixture dataset on the Pile ```regmix-data``` from [RegMix](https://github.com/sail-sg/regmix/tree/main) .
-## Models
-Our run our Tulu experiment with [Qwen2.5](https://huggingface.co/collections/Qwen/qwen25-66e81a666513e518adb90d9e) 0.5B / 3B / 7B.
+## Data Preparation
+We opensource the data mixture dataset: ```admire_ift_runs``` and use the mixture dataset on the Pile ```regmix-data``` from [RegMix](https://github.com/sail-sg/regmix/tree/main).
+We run experiments of different mixtures with [Qwen2.5](https://huggingface.co/collections/Qwen/qwen25-66e81a666513e518adb90d9e) 0.5B / 3B / 7B.
 
 ## Running experiments
 Choose the index of target domain: ```--idx```. 
@@ -44,7 +42,7 @@ Choose the dataset [admire_ift_runs/pile]: ```--dataset```.
 <br/>
 Results will be saved in ```saved_logs```.
 
-### Training and recommending with BayesOpt on Tulu.
+### Training and recommending with BayesOpt on admire_ift_runs.
 ```
 python bayesopt_admire_ift_runs.py --idx -3  #average of ood+id
 ```
@@ -54,7 +52,7 @@ python bayesopt_admire_ift_runs.py --idx -3  #average of ood+id
 python bayesopt_thepile.py --idx -1 #average
 ```
 
-### Training and recommending with MFBayesOpt on Tulu / the Pile
+### Training and recommending with MFBayesOpt on admire_ift_runs / the Pile
 ```
 python mfbayesopt_maxvalue.py --dataset admire_ift_runs --idx -3 #average of ood+id
 python mfbayesopt_maxvalue.py --dataset pile --idx -1 #average
