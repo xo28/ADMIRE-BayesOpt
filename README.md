@@ -28,8 +28,7 @@ Please feel free to email us or raise an issue with this repository and we'll ge
     pip install -r requirements.txt
     ```
 ## 
-This implementaion is based on an official BoTorch tutorial: "Multi-fidelity Bayesian optimization with discrete fidelities using KG"
-https://botorch.org/docs/tutorials/discrete_multi_fidelity_bo/. We followed its comparasions between BayesOpt and MFBayesOpt.
+This implementaion is based on an official BoTorch tutorial: [Multi-fidelity Bayesian optimization with discrete fidelities using KG](https://botorch.org/docs/tutorials/discrete_multi_fidelity_bo/). We followed its comparasions between BayesOpt and MFBayesOpt.
 
 ## Data Preparation
 We opensource the data mixture dataset: ```admire_ift_runs``` and use the mixture dataset on the Pile ```regmix-data``` from [RegMix](https://github.com/sail-sg/regmix/tree/main).
